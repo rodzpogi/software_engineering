@@ -398,6 +398,29 @@
                   <span class="nav-link-text ms-2 ps-1">Alumni Lists</span>
                 </a>
               </li>
+
+              <li class="nav-item ">
+                <a class="nav-link text-white " href="../osas/osas-lists.php">
+                  <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                    <i class="material-icons">
+                      toc
+                    </i>
+                  </div>
+                  <span class="nav-link-text ms-2 ps-1">Osas Lists</span>
+                </a>
+              </li>
+
+              <li class="nav-item ">
+                <a class="nav-link text-white " href="../student/student-list.php">
+                  <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                    <i class="material-icons">
+                      toc
+                    </i>
+                  </div>
+                  <span class="nav-link-text ms-2 ps-1">Student Lists</span>
+                </a>
+              </li>
+
             </ul>
           </div>
         </li>

@@ -40,30 +40,36 @@ include '../../includes/graph-data.php';
     <!-- End Navbar -->
     <div class="container-fluid py-4">
 
-        <?php if ($_SESSION['role'] == "Super Administrator" || $_SESSION['role'] == "Admin") {?>
-         
-        
-
-
-          <div class="row">
-          <div class="col-xl-3 col-sm-6 mb-xl-0">
-            <div class="card">
-              <div class="card-header p-3 pt-2">
+         <?php  if ($_SESSION['role'] == "Super Admin" || $_SESSION['role'] == "Admin" ) {
+    ?>
+	       <div class="row">
+               <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+               <div class="card">
+               <div class="card-header p-3 pt-2">
                 <div class="icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute">
                   <i class="material-icons opacity-10">groups</i>
                 </div>
                 <div class="text-end pt-1">
-<<<<<<< HEAD
+                  <p class="text-sm mb-0 text-capitalize">Total Users</p>
+                  <?php
+                    $alumni_query = "SELECT alumni_id from tbl_form WHERE program_id='$program_id'";
+                    $user_query_run = mysqli_query($db, $alumni_query);
+
+                  if ($user_total = mysqli_num_rows($user_query_run)) {
+                    echo '<h4 class="mb-0">' . $user_total . '</h4>';
+                } else
+                ?>
+
                   <p class="text-sm mb-0 text-capitalize">Total Inventory Equipments</p>
                   <?php
 $alumni_query = "SELECT principal_id from tbl_principal";
     $user_query_run = mysqli_query($db, $alumni_query);
-=======
+    ?>
                   <p class="text-sm mb-0 text-capitalize">Total Users</p>
                   <?php
 $custodian_query = "SELECT custodian_id from tbl_custodian";
     $user_query_run = mysqli_query($db, $custodian_query);
->>>>>>> 0f77df2704698c4d9e53db8e7ef8eff6dd5b91c7
+
 
     if ($user_total = mysqli_num_rows($user_query_run)) {
         echo '<h4 class="mb-0">' . $user_total . '</h4>';
@@ -92,11 +98,11 @@ $custodian_query = "SELECT custodian_id from tbl_custodian";
                   <i class="material-icons opacity-10">groups</i>
                 </div>
                 <div class="text-end pt-1">
-<<<<<<< HEAD
+
                   <p class="text-sm mb-0 text-capitalize">Total Students</p>
-=======
+
                   <p class="text-sm mb-0 text-capitalize">Custodians</p>
->>>>>>> 0f77df2704698c4d9e53db8e7ef8eff6dd5b91c7
+
 
                   <?php
 $alumni_query = "SELECT admission_id FROM tbl_admission ";
@@ -129,11 +135,11 @@ $alumni_query = "SELECT admission_id FROM tbl_admission ";
                   <i class="material-icons opacity-10">groups</i>
                 </div>
                 <div class="text-end pt-1">
-<<<<<<< HEAD
+
                   <p class="text-sm mb-0 text-capitalize">Electronics Laboratory </p>
-=======
+
                   <p class="text-sm mb-0 text-capitalize">Admins</p>
->>>>>>> 0f77df2704698c4d9e53db8e7ef8eff6dd5b91c7
+
                   <?php
 $alumni_query = "SELECT emp_status_id FROM tbl_form WHERE emp_status_id = 2";
     $user_query_run = mysqli_query($db, $alumni_query);
@@ -163,11 +169,11 @@ $alumni_query = "SELECT emp_status_id FROM tbl_form WHERE emp_status_id = 2";
                   <i class="material-icons opacity-10">groups</i>
                 </div>
                 <div class="text-end pt-1">
-<<<<<<< HEAD
+
                   <p class="text-sm mb-0 text-capitalize">Psychology Laboratory</p>
-=======
+
                   <p class="text-sm mb-0 text-capitalize">Availability</p>
->>>>>>> 0f77df2704698c4d9e53db8e7ef8eff6dd5b91c7
+
                   <?php
 $alumni_query = "SELECT emp_status_id FROM tbl_form WHERE emp_status_id = 3";
     $user_query_run = mysqli_query($db, $alumni_query);
@@ -597,7 +603,8 @@ $alumni_query =
         </div>
       </div>
     </div>
-  </div>
+  </div> 
+   
             <div class="col-lg-6 mt-4 mt-lg-0 ">
               <div class="card mb-5">
                 <div class="card-header pb-0  p-3">

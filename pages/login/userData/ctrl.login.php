@@ -27,6 +27,8 @@ if (isset($_POST['login'])) {
 
   $osas = mysqli_query($db, "SELECT * FROM tbl_osas WHERE username = '$username'");
   $numrow7 = mysqli_num_rows($osas);
+  
+
 
   
 
@@ -138,35 +140,7 @@ elseif ($numrow7 > 0) {
 }
 
 
-  // elseif ($numrow2 > 0) {
-  //   while ($row = mysqli_fetch_array($officer)) {
-  //     $hashedPwdCheck = password_verify($password, $row['password']);
-  //     if ($hashedPwdCheck == false) {
-  //       $_SESSION['sessionP'] = true;
-  //       header("location: ../sign-in.php");
-  //       exit();
-  //     } elseif ($hashedPwdCheck == true) {
-  //       $_SESSION['role'] = "Alum Officer";
-  //       $_SESSION['userid'] = $row['officer_id'];
-  //       $_SESSION['name'] = $row['username'];
-  //     }
-  //     header("location: ../../dashboard/dashboard.php");
-  //   }
-  // } elseif ($numrow3 > 0) {
-  //   while ($row = mysqli_fetch_array($president)) {
-  //     $hashedPwdCheck = password_verify($password, $row['password']);
-  //     if ($hashedPwdCheck == false) {
-  //       $_SESSION['sessionP'] = true;
-  //       header("location: ../sign-in.php");
-  //       exit();
-  //     } elseif ($hashedPwdCheck == true) {
-  //       $_SESSION['role'] = "President";
-  //       $_SESSION['userid'] = $row['pres_id'];
-  //       $_SESSION['name'] = $row['username'];
-  //     }
-  //     header("location: ../../dashboard/dashboard.php");
-  //   }
-  // } 
+  
   else {
     $_SESSION['sessionUP'] = true;
     header("location: ../sign-in.php");

@@ -106,10 +106,7 @@ exit;
                       <p>Enter your personal information to proceed.</p>
                     </div>
                     <div class="input-text">
-                      <!-- <div class="input-div">
-                        <input type="text" required require name="stud_no">
-                        <span>Student Number</span>
-                      </div> -->
+
                       <div class="input-div">
                         <input type="text" required require name="firstname">
                         <span>First Name</span>
@@ -166,7 +163,7 @@ exit;
     </div>
   </main>
   <?php include "../../includes/fixed-plugin.php" ?>
-  <!--   Core JS Files   -->
+
   <?php include "../../includes/script.php" ?>
 </body>
 <script>
